@@ -16,20 +16,25 @@
                 <h2>Todo list</h2>
             </div>
             <ul id="taskArea">
-                <li>
+                <li th:each="task : ${taskList}">
                     <table>
                         <tr>
-                            <td style="width: 85%;">Some thing spacial</td>
-                            <td style="width: 7%;">Edit</td>
-                            <td style="width: 8%;">Delete</td>
+                            <td style="width: 85%;" th:text="${task.taskTitle}"></td>
+                            <td style="width: 7%;">
+                                <a th:href="@{/edit(id=${task.taskId})}">Edit</a>
+                            </td>
+                            <td style="width: 8%;">
+                                <a th:href="@{/delete(id=${task.taskId})}">Delete</a>
+                            </td>
                         </tr>
                     </table>
                 </li>
             </ul>
-            <form id="taskForm" name="taskForm" nameForm="taskForm">
+            <form id="taskForm" name="taskForm" nameForm="taskForm" th:action="@{/save}" th:object="${task}" th:method="post">
                 <div class="form-group">
                     <div class="input-group clearfix">
-                        <input type="text" name="task" placeholder="Type a task..." autocomplete="off" class="form-control"/>
+                        <input th:type="hidden" th:name="taskId" th:value="${task.taskId}">
+                        <input type="text" th:name="taskTitle" th:value="${task.taskTitle}" placeholder="Type a task..." autocomplete="off" class="form-control"/>
                         <button type="submit" class="primary">Save</button>
                     </div>
                 </div>
