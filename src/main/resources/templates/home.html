@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+    <noscript>
+        <h2>Sorry! Your browser doesn't support Javascript</h2>
+    </noscript>
+
+    <div id="task-page">
+        <div class="task-container">
+            <div class="task-header">
+                <h2>Todo list</h2>
+            </div>
+            <ul id="taskArea">
+                <li>
+                    <table>
+                        <tr>
+                            <td style="width: 85%;">Some thing spacial</td>
+                            <td style="width: 7%;">Edit</td>
+                            <td style="width: 8%;">Delete</td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            <form id="taskForm" name="taskForm" nameForm="taskForm">
+                <div class="form-group">
+                    <div class="input-group clearfix">
+                        <input type="text" name="task" placeholder="Type a task..." autocomplete="off" class="form-control"/>
+                        <button type="submit" class="primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <a href="#" class="float" target="_blank">
+            <i class="fa fa-sign-out my-float"></i>
+        </a>
+    </div>
+
+</body>
+</html>
