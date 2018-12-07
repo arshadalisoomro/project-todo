@@ -59,6 +59,7 @@ input[type=text] {
     -ms-transition: all 0.30s ease-in-out ;
     -o-transition: all 0.30s ease-in-out ;
     outline: none;
+    padding-left: 10px;
     border-bottom: 1px solid #56bbb6;
 }
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Login | Spring Boot To-do App</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+  <body>
+    <noscript>
+      <h2>Sorry! Your browser doesn't support Javascript</h2>
+    </noscript>
+
+    <div id="username-page">
+        <div class="username-page-container">
+            <h1 class="title">Login</h1>
+            <form id="usernameForm" name="usernameForm" th:method="post">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Username" autocomplete="off" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="password" autocomplete="off" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="accent username-submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>

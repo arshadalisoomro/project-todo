@@ -41,6 +41,7 @@ public class TaskCrudController {
         //Getting the selected record from DB
         Task task = taskService.findByTaskId(taskId);
         log.error("Task is >>====>" + task.getTaskTitle());
+
         //Sending model for adding new record in DB
         model.addAttribute("task", task);
 
